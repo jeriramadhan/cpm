@@ -9,11 +9,12 @@
 
     <form class="js-validation-signin px-30" action="<?php echo base_url().'index.php/login/auth'?>" method="post">
       <div class="form-group has-feedback">
-        <input type="text" class="form-control" placeholder="Username" name="username">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            <input type="text" class="form-control" id="login-username" placeholder="Username" name="username" required>
+
+            
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password" name="passwords">
+            <input type="password" class="form-control" id="login-password" placeholder="Password" name="password" required>
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
       <div class="row">
