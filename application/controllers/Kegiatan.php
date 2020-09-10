@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Proyek extends CI_Controller
+class Kegiatan extends CI_Controller
 {
 
 
@@ -11,49 +11,49 @@ class Proyek extends CI_Controller
 		if($this->session->userdata('masuk') !=TRUE){
             redirect('login');
         };
-		$this->load->model('MProyek', 'm_proyek');
+		$this->load->model('MKegiatan', 'm_kegiatan');
 		// $this->load->model('MKriteria', 'm_kriteria');
 		// $this->load->model('MPendaftar', 'm_pendaftar');
 	}
 
 	public function index() {
-		$data = $this->m_proyek->get_entries();
+		$data = $this->m_kegiatan->get_entries();
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
-		$this->load->view('proyek/index', ['data' => $data]);
+		$this->load->view('kegiatan/index', ['data' => $data]);
 		$this->load->view('layout/footer', ['js' => 'proyek/indexjs']);
 	}
 
-	public function createProyek()
+	public function createKegiatan()
 	{
 		if (!empty($_POST)) {
-			$this->m_proyek->insert_entry();
-			redirect('proyek/index');
+			$this->m_kegiatan->insert_entry();
+			redirect('kegiatan/index');
 		}
 
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
-		$this->load->view('proyek/createproyek');
+		$this->load->view('kegiatan/createkegiatan');
 		$this->load->view('layout/footer', ['js' => 'proyek/createjs']);
 	}
 
-	public function updateProyek($id)
+	public function updateKegiatan($id)
 	{
 		if (!empty($_POST)) {
-			$this->m_proyek->update_entry();
-			redirect('proyek/index');
+			$this->m_kegiatan->update_entry();
+			redirect('kegiatan/index');
 		}
 
-		$data = $this->m_proyek->get_entries_by_id($id);
+		$data = $this->m_kegiatan->get_entries_by_id($id);
 		$this->load->view('layout/header');
 		$this->load->view('layout/sidebar');
-		$this->load->view('proyek/updateproyek', ['data' => $data]);
+		$this->load->view('kegiatan/updatekegiatan', ['data' => $data]);
 		$this->load->view('layout/footer', ['js' => 'proyek/updatejs']);
 	}
 
-	public function deleteProyek($id)
+	public function deleteKegiatan($id)
 	{
-		$this->m_proyek->delete_entry($id);
-		redirect('proyek/index');
+		$this->m_kegiatan->delete_entry($id);
+		redirect('kegiatan/index');
 	}
 }

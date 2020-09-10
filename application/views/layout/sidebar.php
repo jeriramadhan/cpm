@@ -20,6 +20,8 @@
             <li><a href="<?= site_url('menu') ?>"><i class="fa fa-home"></i> <span>Home</span></a></li>
             <!-- <li><a href="<?= site_url('menu/pendaftar') ?>"><i class="fa fa-user"></i> <span>Pendaftar</span></a></li> -->
             <li><a href="<?= site_url('proyek') ?>"><i class="fa fa-user"></i> <span>Data Proyek</span></a></li>
+            <li><a href="<?= site_url('kegiatan') ?>"><i class="fa fa-file-pdf-o"></i> <span>Data Kegiatan</span></a></li>
+            <li><a href="<?= site_url('subkegiatan') ?>"><i class="fa fa-file-pdf-o"></i> <span>Data Sub Kegiatan</span></a></li>
             <!-- <li><a href="<?= site_url('mahasiswa') ?>"><i class="fa fa-hourglass"></i> <span>Scoring Mahasiswa</span></a></li>
             <li><a href="<?= site_url('kriteria/keterangan') ?>"><i class="fa fa-file-pdf-o"></i> <span>Kriteria</span></a></li>
             <li><a href="<?= site_url('kriteria') ?>"><i class="fa fa-file-pdf-o"></i> <span>Atribut</span></a></li>
